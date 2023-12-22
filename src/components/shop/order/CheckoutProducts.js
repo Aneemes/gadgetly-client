@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LayoutContext } from "../layout";
 import { subTotal, quantity, totalCost } from "../partials/Mixins";
 
@@ -12,7 +12,7 @@ import DropIn from "braintree-web-drop-in-react";
 const apiURL = process.env.REACT_APP_API_URL;
 
 export const CheckoutComponent = (props) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { data, dispatch } = useContext(LayoutContext);
 
   const [state, setState] = useState({
@@ -165,7 +165,7 @@ export const CheckoutComponent = (props) => {
 };
 
 const CheckoutProducts = ({ products }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <Fragment>
@@ -179,7 +179,7 @@ const CheckoutProducts = ({ products }) => {
               >
                 <div className="md:flex md:items-center md:space-x-4">
                   <img
-                    onClick={(e) => history.push(`/products/${product._id}`)}
+                    onClick={(e) => navigate(`/products/${product._id}`)}
                     className="cursor-pointer md:h-20 md:w-20 object-cover object-center"
                     src={`${apiURL}/uploads/products/${product.pImages[0]}`}
                     alt="wishListproduct"

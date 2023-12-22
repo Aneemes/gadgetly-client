@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LayoutContext } from "../index";
 import { cartListProduct } from "./FetchApi";
 import { isAuthenticate } from "../auth/fetchApi";
@@ -9,7 +9,7 @@ import { subTotal, quantity, totalCost } from "./Mixins";
 const apiURL = process.env.REACT_APP_API_URL;
 
 const CartModal = (props) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { data, dispatch } = useContext(LayoutContext);
   const products = data.cartProduct;
@@ -169,7 +169,7 @@ const CartModal = (props) => {
                   <div
                     className="px-4 py-2 bg-black text-white text-center cursor-pointer"
                     onClick={(e) => {
-                      history.push("/checkout");
+                      navigate("/checkout");
                       cartModalOpen();
                     }}
                   >
@@ -179,7 +179,7 @@ const CartModal = (props) => {
                   <div
                     className="px-4 py-2 bg-black text-white text-center cursor-pointer"
                     onClick={(e) => {
-                      history.push("/");
+                      navigate("/");
                       cartModalOpen();
                       dispatch({
                         type: "loginSignupError",

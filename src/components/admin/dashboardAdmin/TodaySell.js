@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import moment from "moment";
 import { DashboardContext } from "./";
 import { todayAllOrders } from "./Action";
@@ -7,7 +7,7 @@ import { todayAllOrders } from "./Action";
 const apiURL = process.env.REACT_APP_API_URL;
 
 const SellTable = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { data, dispatch } = useContext(DashboardContext);
   const [newList, setNewList] = useState(null);
 
@@ -68,7 +68,7 @@ const SellTable = () => {
         </div>
         <div className="flex justify-center">
           <span
-            onClick={(e) => history.push("/admin/dashboard/orders")}
+            onClick={(e) => navigate("/admin/dashboard/orders")}
             style={{ background: "#303031" }}
             className="cursor-pointer px-4 py-2 text-white rounded-full"
           >

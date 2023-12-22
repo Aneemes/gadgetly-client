@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { HomeContext } from "./index";
 import { getAllCategory } from "../../admin/categories/FetchApi";
 import { getAllProduct, productByPrice } from "../../admin/products/FetchApi";
@@ -8,7 +8,7 @@ import "./style.css";
 const apiURL = process.env.REACT_APP_API_URL;
 
 const CategoryList = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { data } = useContext(HomeContext);
   const [categories, setCategories] = useState(null);
 
@@ -37,7 +37,7 @@ const CategoryList = () => {
               <Fragment key={index}>
                 <div
                   onClick={(e) =>
-                    history.push(`/products/category/${item._id}`)
+                    navigate(`/products/category/${item._id}`)
                   }
                   className="col-span-1 m-2 flex flex-col items-center justify-center space-y-2 cursor-pointer"
                 >
