@@ -63,6 +63,7 @@ const SingleProduct = (props) => {
             <Fragment key={index}>
               <div className="relative col-span-1 m-2">
                 <img
+                  // eslint-disable-next-line no-restricted-globals
                   onClick={(e) => navigate(`/products/${item._id}`)}
                   className="w-full object-cover object-center cursor-pointer"
                   src={`${apiURL}/uploads/products/${item.pImages[0]}`}

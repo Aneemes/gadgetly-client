@@ -12,12 +12,14 @@ const Submenu = (props) => {
           <div className="text-sm flex space-x-2">
             <span
               className="hover:text-yellow-700 cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/")}
             >
               Shop
             </span>
             <span
               className="hover:text-yellow-700 cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate(`/products/category/${categoryId}`)}
             >
               {category}

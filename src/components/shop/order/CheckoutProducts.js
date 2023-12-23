@@ -129,6 +129,7 @@ export const CheckoutComponent = (props) => {
                         setState,
                         getPaymentProcess,
                         totalCost,
+                        // eslint-disable-next-line no-restricted-globals
                         history
                       )
                     }

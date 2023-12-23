@@ -35,18 +35,21 @@ const Navber = (props) => {
           <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/")}
             >
               Shop
             </span>
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/blog")}
             >
               Blog
             </span>
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/contact-us")}
             >
               Contact us
@@ -69,6 +72,7 @@ const Navber = (props) => {
               />
             </svg>
             <span
+            // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/")}
               style={{ letterSpacing: "0.10rem" }}
               className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
@@ -77,6 +81,7 @@ const Navber = (props) => {
             </span>
           </div>
           <div
+            // eslint-disable-next-line no-restricted-globals
             onClick={(e) => navigate("/")}
             style={{ letterSpacing: "0.70rem" }}
             className="hidden lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
@@ -86,6 +91,7 @@ const Navber = (props) => {
           <div className="flex items-right col-span-2 lg:col-span-1 flex justify-end">
             {/*  WishList Page Button */}
             <div
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/wish-list")}
               className="hover:bg-gray-200 rounded-lg px-2 py-2 cursor-pointer"
               title="Wishlist"
@@ -178,6 +184,7 @@ const Navber = (props) => {
                             <span>My Account</span>
                           </span>
                           <span
+                            // eslint-disable-next-line no-restricted-globals
                             onClick={(e) => navigate("/wish-list")}
                             className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
                           >
@@ -200,6 +207,7 @@ const Navber = (props) => {
                             <span>My Wishlist</span>
                           </span>
                           <span
+                            // eslint-disable-next-line no-restricted-globals
                             onClick={(e) => navigate("/user/setting")}
                             className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer"
                           >
@@ -255,6 +263,7 @@ const Navber = (props) => {
                       <Fragment>
                         <li className="flex flex-col text-gray-700 w-48 shadow-lg">
                           <span
+                            // eslint-disable-next-line no-restricted-globals
                             onClick={(e) => navigate("/admin/dashboard")}
                             className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
                           >
@@ -369,18 +378,21 @@ const Navber = (props) => {
           <div className="col-span-1 flex flex-col text-gray-600">
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/")}
             >
               Shop
             </span>
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/blog")}
             >
               Blog
             </span>
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
+              // eslint-disable-next-line no-restricted-globals
               onClick={(e) => navigate("/contact-us")}
             >
               Contact us

@@ -54,6 +54,7 @@ const Product = () => {
               >
                 <div className="md:w-1/2 md:flex md:items-center">
                   <img
+                    // eslint-disable-next-line no-restricted-globals
                     onClick={(e) => navigate(`/products/${product._id}`)}
                     className="cursor-pointer md:h-20 md:w-20 object-cover object-center"
                     src={`${apiURL}/uploads/products/${product.pImages[0]}`}
@@ -75,6 +76,7 @@ const Product = () => {
 
                   <div
                     style={{ background: "#303031" }}
+                    // eslint-disable-next-line no-restricted-globals
                     onClick={(e) => navigate(`/products/${product._id}`)}
                     className="inline-block px-4 py-2 text-white text-xs md:text-base text-center cursor-pointer hover:opacity-75"
                   >

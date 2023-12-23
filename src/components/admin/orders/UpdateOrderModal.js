@@ -1,6 +1,6 @@
 import React, { Fragment, useContext, useState, useEffect } from "react";
 import { OrderContext } from "./index";
-import { getAllOrder, editCategory } from "./FetchApi";
+import { getAllOrder, editOrder } from "./FetchApi";
 
 const UpdateOrderModal = (props) => {
   const { data, dispatch } = useContext(OrderContext);
@@ -26,7 +26,7 @@ const UpdateOrderModal = (props) => {
 
   const submitForm = async () => {
     dispatch({ type: "loading", payload: true });
-    let responseData = await editCategory(oId, status);
+    let responseData = await editOrder(oId, status);
     if (responseData.error) {
       dispatch({ type: "loading", payload: false });
     } else if (responseData.success) {
